@@ -41,7 +41,7 @@ class Cli
             Recipes.all.each.with_index(1) do |element, index|
             puts "#{index}. #{element.ingredients}"
         end
-        ingredients_menu_options
+       
     end
     
     def invalid_Choice
