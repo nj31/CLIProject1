@@ -1,0 +1,6 @@
+require "pry"
+require "rest-client"
+require "json"
+require_relative "./services/api"
+require_relative "./services/cli"
+ require_relative "./models/recipes"

@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby 
+
+
+require_relative "../lib/enviroment.rb"
+
+#Menu::cli.new
+# Menu.starts
+#Cli.new.start
+#Menu.new.print
+#CLI.new.Category
+
+Cli.new.start
