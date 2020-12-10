@@ -6,6 +6,7 @@ Getting Started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
 Prerequisites
+
 You can git clone the file. Do a bundle install and you should be up and running.
 
 Running the tests
