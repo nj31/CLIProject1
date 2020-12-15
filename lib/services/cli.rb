@@ -8,7 +8,7 @@ class Cli
 
     def get_input
         puts ""
-        puts "Select a recipe by the #"
+        puts "Select a recipe by the # or exact spelling of name!"
         puts "To exit, type exit"
         gets.chomp
     end
@@ -21,13 +21,33 @@ class Cli
         choose_menu
     end
   
+    def ingredients_Are(input)
+        index = input.to_i - 1 
+        puts "The ingredients are:"
+        recipes = Recipes.all[index]
+        puts recipes.ingredients
+        choose_menu
+    end
+    def ingredients_Are_Name(input)
+        
+        puts "The ingredients are:"
+        recipes = Recipes.all[title]
+        puts recipes.ingredients
+        choose_menu
+    end
+    def searchByString
+        recipes = Recipes.all[title]
+       # recipes.each {|str| return str if str.include("Ginger Champagne")}
+        puts recipes.ingredients
+    end
     def choose_menu
+        
     input = get_input
-        if input.to_i.between?(1, Recipes.all.length)
-            index = input.to_i - 1 
-            puts "The ingredients are:"
-            ingredients = Recipes.all[index]
-            puts ingredients.ingredients
+    #binding.pry
+    if input.to_i.between?(1, Recipes.all.length)
+            ingredients_Are(input)
+        elsif  recipes = Recipes.find_By_Title(input)
+            puts recipes.ingredients
             choose_menu
         elsif input == "exit" 
             exit_menu
@@ -37,6 +57,8 @@ class Cli
         
     end
     
+ 
+
     def list_Ingredients
             Recipes.all.each.with_index(1) do |element, index|
             puts "#{index}. #{element.ingredients}"
@@ -50,7 +72,7 @@ class Cli
         puts ""
         list_Recipes
         
-        puts "Select a recipe by the #"
+        puts "Select a recipe by the # or exact spelling of name!"
         puts "To exit, type exit"
                 
     end
