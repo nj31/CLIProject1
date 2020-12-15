@@ -13,8 +13,7 @@ You can git clone the file. Do a bundle install and you should be up and running
 Running the tests
 
 To run this program, type "ruby bin/run"
-You can select a recipe from a numbered menu.
-Type the indexed number to see what the ingredients are.
+You can select a recipe from a numbered menu or simply type in the recipe's name to see what the ingredients are.
 Type "exit" to exit the program. 
 
 Give an example
