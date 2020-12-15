@@ -37,7 +37,6 @@ class Cli
     end
     def searchByString
         recipes = Recipes.all[title]
-       # recipes.each {|str| return str if str.include("Ginger Champagne")}
         puts recipes.ingredients
     end
     def choose_menu
